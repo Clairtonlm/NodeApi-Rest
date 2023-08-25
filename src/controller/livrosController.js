@@ -1,5 +1,5 @@
 //importar o modelo livro
-import livros from "../models/Livro.js";
+//import livros from "../models/Livro.js";
 import Livro from "../models/Livro.js";
 
 class LivroController {
@@ -47,7 +47,7 @@ class LivroController {
     static excluirLivro = (req, res)=>{
         const id = req.params.id;
 
-        livros.findByIdAndDelete(id, (err)=>{
+        Livros.findByIdAndDelete(id, (err)=>{
             if(!err){
                 res.status(200).send({message: 'Livro removido com sucesso!'})
             }else{
